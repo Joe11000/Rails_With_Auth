@@ -7,7 +7,7 @@ RailsWithAuth::Application.routes.draw do
   # root to: 'users#new'
   root to: 'users#new'
 
-  link_to "Next", @users_path
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
