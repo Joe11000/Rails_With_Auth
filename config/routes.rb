@@ -1,4 +1,12 @@
 RailsWithAuth::Application.routes.draw do
+  resources :users, except: :new
+  get '/users/new', to: "user#name", as: :sign_in
+  match '/users/:id', to: "user#edit", as: :edit_profile
+
+  resources :sessions, only: [:create, :destroy]
+  # root to: 'users#new'
+  root to: 'sessions/new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

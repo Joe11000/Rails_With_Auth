@@ -35,19 +35,19 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-	group :development, :test do
-	  gem 'rspec-rails'
-	  gem 'better_errors'
-  	gem 'debugger'
-	end
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'better_errors'
+	gem 'debugger'
+end
 
-	group :test do
-	  gem 'faker'
-	  gem 'factory_girl_rails'
-	  gem 'shoulda-matchers'
-	end
+group :test do
+  gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+end
 
-  group :assets do
-  	gem 'jquery-rails'
-  end
+group :assets do
+	gem 'jquery-rails'
+end
 	
