@@ -11,17 +11,11 @@ script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
 - bundle exec rake
-env:
-  global:
-    secure: dySkedt3UsGY/k1Gf4773871T3Twe+jyaFlFPOjvSO51k1bpqvy9koHSSa/emOawTgeTtIzSNC6nOkiHsqwXS2iJeL6GmKC4S3wbPYx3E8i7huXd573AjouNSrliqPl3KRYLNTTwn6lB6RFv36WRs0s+6goKCM0uEHB60Cyt9Vc=
+# env:
+#   global:
+#     secure: dySkedt3UsGY/k1Gf4773871T3Twe+jyaFlFPOjvSO51k1bpqvy9koHSSa/emOawTgeTtIzSNC6nOkiHsqwXS2iJeL6GmKC4S3wbPYx3E8i7huXd573AjouNSrliqPl3KRYLNTTwn6lB6RFv36WRs0s+6goKCM0uEHB60Cyt9Vc=
 deploy:
   provider: heroku
   api_key:
    secure:l8Bpr3BSAetQ8AjNjhy03c/wmFE03oPQEdjTi8cJXTvYSHr0+Q2qkJ7lTiAM9+umiUK69sYXP+TVDHfVQ5rgt0WlqlvQTM7j+pVVscoDI2+f8V/QjKGvNqeeLVBKjCTl4ceI6ltnLBVx6UZ1QO9jWTe0vopURBDzcE8MPNo+6gI=
 
-app: desolate-oasis-7380
-  on:
-    branch: master
-    rvm: 1.9.3
-    repo: zachgersh/pbp
-  run: rake db:migrate
