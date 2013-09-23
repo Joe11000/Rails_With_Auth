@@ -1,11 +1,11 @@
 RailsWithAuth::Application.routes.draw do
-  get '/users/new', to: "users#new", as: :sign_in
-  resources :users, except: :new
-  match '/users/:id', to: "users#edit", as: :edit_profile
+
+  # get '/users/new', to: "users#new", as: :sign_in
+  resources :users
+  # match '/users/:id', to: "users#show", as: :show_profile
 
   resources :sessions, only: [:create, :destroy]
   # root to: 'users#new'
-  root to: 'users#new'
 
 
   # The priority is based upon order of creation:
@@ -64,4 +64,5 @@ RailsWithAuth::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  root to: 'users#new'
 end
